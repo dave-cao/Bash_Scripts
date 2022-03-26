@@ -2,7 +2,7 @@
 
 # script to set random background wallpapers on my GNOME desktop
 # set base path
-export wallpaper_path=/home/cow/Pictures/Wallpapers
+export wallpaper_path=$HOME/Pictures/Wallpapers
 shopt -s nullglob
 
 # shuffle function for the wallpapers

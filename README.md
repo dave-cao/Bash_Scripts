@@ -20,11 +20,17 @@ This repository will be a documentary of my Linux journey and learning Bash.
 ### Wallpaper Changer (wallpaper.sh)
 
 -   A script that automatically changes the wallpaper of your current gnome desktop every hour
--   The wallpapers depend on the path you set within the script
+-   The wallpapers depend on the path you set within the script (within walpaper.sh)
 -   It also uses pywal to change the colour scheme of your terminal to the current colour scheme of the desktop
+    - https://github.com/dylanaraps/pywal/wiki/Installation
 -   Note that to run this on startup, you need to path to this script in the `.profile`
+```
+# start my custom script for setting random background wallpapers
+if [ -f "$HOME/wallpaper.sh" ] ; then
+    bash $HOME/wallpaper.sh &
+fi
+```
 -   To have this run when the terminal is open, paste the following script into your `.bashrc` file.
-
 ```
 x=`gsettings get org.gnome.desktop.background picture-uri | wc -c`
 y=$((x-2))
